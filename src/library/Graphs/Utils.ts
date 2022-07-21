@@ -45,6 +45,10 @@ export const formatSize = (size: any, minHeight: number) => {
   };
 };
 
+export const getLabelFontsizeChart = () => {
+  return window && window.innerWidth && window.innerWidth < 768 ? 11 : 13;
+};
+
 export const getGradient = (ctx: any, chartArea: any) => {
   let width;
   let height;

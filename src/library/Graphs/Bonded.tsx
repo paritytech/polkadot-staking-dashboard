@@ -9,6 +9,7 @@ import { useTheme } from 'contexts/Themes';
 import { humanNumber } from 'Utils';
 import { GraphWrapper } from './Wrappers';
 import { BondedProps } from './types';
+import { getLabelFontsizeChart } from './Utils';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -48,7 +49,7 @@ export const Bonded = (props: BondedProps) => {
           padding: 20,
           color: defaultThemes.text.primary[mode],
           font: {
-            size: 13,
+            size: getLabelFontsizeChart(),
             weight: '500',
           },
         },

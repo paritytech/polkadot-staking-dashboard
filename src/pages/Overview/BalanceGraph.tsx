@@ -15,7 +15,11 @@ import {
   humanNumber,
   toFixedIfNecessary,
 } from 'Utils';
-import { useSize, formatSize } from 'library/Graphs/Utils';
+import {
+  useSize,
+  formatSize,
+  getLabelFontsizeChart,
+} from 'library/Graphs/Utils';
 import {
   defaultThemes,
   networkColors,
@@ -98,7 +102,7 @@ export const BalanceGraph = () => {
           padding: 20,
           color: defaultThemes.text.primary[mode],
           font: {
-            size: 13,
+            size: getLabelFontsizeChart(),
             weight: '500',
           },
         },
