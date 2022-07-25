@@ -8,8 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ExtensionWrapper } from '../Wrappers';
 import { Wrapper } from './Wrapper';
 import { ReadOnlyInput } from '../ReadOnlyInput';
+import { ReadOnlyProps } from '../types';
 
-export const ReadOnly = (props: any) => {
+export const ReadOnly = (props: ReadOnlyProps) => {
   const { setReadOnlyOpen, readOnlyOpen } = props;
 
   const { accounts, forgetAccounts } = useConnect();

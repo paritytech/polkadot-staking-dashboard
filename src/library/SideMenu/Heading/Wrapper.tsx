@@ -4,7 +4,7 @@
 import styled from 'styled-components';
 import { textSecondary } from 'theme';
 
-export const Wrapper = styled.div<any>`
+export const Wrapper = styled.div<{ minimised: number }>`
   display: flex;
   flex-flow: row wrap;
   justify-content: ${(props) => (props.minimised ? 'center' : 'flex-start')};

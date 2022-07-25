@@ -17,8 +17,9 @@ import { useTheme } from 'contexts/Themes';
 import { AnySubscan } from 'types';
 import { usePayoutList, PayoutListProvider } from './context';
 import { ItemWrapper } from '../Wrappers';
+import { PayoutListProps } from '../types';
 
-export const PayoutListInner = (props: any) => {
+export const PayoutListInner = (props: PayoutListProps) => {
   const { allowMoreCols, pagination } = props;
 
   const { mode } = useTheme();
@@ -218,7 +219,7 @@ export const PayoutListInner = (props: any) => {
   );
 };
 
-export const PayoutList = (props: any) => {
+export const PayoutList = (props: PayoutListProps) => {
   return (
     <PayoutListProvider>
       <PayoutListShouldUpdate {...props} />

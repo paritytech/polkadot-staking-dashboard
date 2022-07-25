@@ -4,7 +4,7 @@
 import styled from 'styled-components';
 import { textPrimary, textSecondary } from 'theme';
 
-export const AccountWrapper = styled.div<any>`
+export const AccountWrapper = styled.div<{ last?: boolean }>`
   box-sizing: border-box;
   width: 100%;
   display: flex;

@@ -11,8 +11,9 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 import { Spacer } from '../Wrappers';
 import { MotionContainer } from './MotionContainer';
+import { SetControllerProps } from '../types';
 
-export const SetController = (props: any) => {
+export const SetController = (props: SetControllerProps) => {
   const { section } = props;
 
   const { activeAccount, accounts, getAccount } = useConnect();

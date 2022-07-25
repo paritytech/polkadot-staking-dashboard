@@ -14,6 +14,8 @@ const App: React.FC = () => {
     localStorage.setItem('network', network);
   }
 
+  // if (!localStorage) throw new Error('LocalStorage Is Not Supported');
+
   return (
     <ThemesProvider>
       <Providers />

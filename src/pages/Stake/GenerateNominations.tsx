@@ -17,8 +17,11 @@ import {
   ValidatorFilterProvider,
 } from 'library/Filter/context';
 import { Wrapper } from '../Overview/Announcements/Wrappers';
+import { GenerateNominationsInnerProps, Nominations } from './types';
 
-export const GenerateNominationsInner = (props: any) => {
+export const GenerateNominationsInner = (
+  props: GenerateNominationsInnerProps
+) => {
   // functional props
   const setters = props.setters ?? [];
   const defaultNominations = props.nominations;
@@ -123,7 +126,7 @@ export const GenerateNominationsInner = (props: any) => {
     }
   });
 
-  const updateSetters = (_nominations: any) => {
+  const updateSetters = (_nominations: Nominations) => {
     for (const s of setters) {
       const { current, set } = s;
       const callable = current?.callable ?? false;
@@ -146,7 +149,7 @@ export const GenerateNominationsInner = (props: any) => {
   const cbAddNominations = ({ setSelectActive }: any) => {
     setSelectActive(false);
 
-    const updateList = (_nominations: Array<any>) => {
+    const updateList = (_nominations: Nominations) => {
       setMethod(null);
       removeValidatorMetaBatch(batchKey);
       setNominations(_nominations);
@@ -269,7 +272,7 @@ export const GenerateNominationsInner = (props: any) => {
   );
 };
 
-export const GenerateNominations = (props: any) => {
+export const GenerateNominations = (props: GenerateNominationsInnerProps) => {
   return (
     <ValidatorFilterProvider>
       <GenerateNominationsInner {...props} />

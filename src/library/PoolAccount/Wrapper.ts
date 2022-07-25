@@ -5,7 +5,11 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { textPrimary, textSecondary, borderSecondary } from 'theme';
 
-export const Wrapper = styled(motion.button)<any>`
+export const Wrapper = styled(motion.button)<{
+  fill: string;
+  fontSize: string;
+  cursor: string;
+}>`
   border-radius: 1rem;
   box-shadow: none;
   display: flex;

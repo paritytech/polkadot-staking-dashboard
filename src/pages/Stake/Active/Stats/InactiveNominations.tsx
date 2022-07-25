@@ -10,7 +10,7 @@ export const ActiveNominationsStatBox = () => {
 
   const total = Object.values(nominationStatuses).length;
   const inactive =
-    Object.values(nominationStatuses).filter((_v: any) => _v === 'inactive')
+    Object.values(nominationStatuses).filter((_v) => _v === 'inactive')
       .length ?? 0;
 
   // inactive nominations as percent

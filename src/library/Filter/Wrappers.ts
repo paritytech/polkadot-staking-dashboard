@@ -79,7 +79,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const ItemWrapper = styled.div<any>`
+export const ItemWrapper = styled.div<{ active?: boolean }>`
   border: 1px solid ${(props) => (props.active ? networkColor : borderPrimary)};
   border-radius: 0.7rem;
   display: flex;

@@ -72,17 +72,15 @@ export const ValidatorListInner = (props: any) => {
   const showMenu = props.showMenu ?? true;
   const inModal = props.inModal ?? false;
 
-  const actionsAll = [...actions].filter((action: any) => !action.onSelected);
-  const actionsSelected = [...actions].filter(
-    (action: any) => action.onSelected
-  );
+  const actionsAll = [...actions].filter((action) => !action.onSelected);
+  const actionsSelected = [...actions].filter((action) => action.onSelected);
 
   const disableThrottle = props.disableThrottle ?? false;
   const refetchOnListUpdate =
     props.refetchOnListUpdate !== undefined ? props.refetchOnListUpdate : false;
 
   // current page
-  const [page, setPage]: any = useState(1);
+  const [page, setPage] = useState(1);
 
   // current render iteration
   const [renderIteration, _setRenderIteration] = useState<number>(1);
@@ -91,7 +89,7 @@ export const ValidatorListInner = (props: any) => {
   const [validatorsDefault, setValidatorsDefault] = useState(props.validators);
 
   // manipulated list (ordering, filtering) of validators
-  const [validators, setValidators]: any = useState(props.validators);
+  const [validators, setValidators] = useState(props.validators);
 
   // is this the initial fetch
   const [fetched, setFetched] = useState(false);

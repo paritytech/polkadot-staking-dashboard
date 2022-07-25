@@ -8,7 +8,7 @@ export const useEraTimeLeft = () => {
   const { sessionEra, getEraTimeLeft } = useSessionEra();
 
   // store era time left as state object
-  const [eraTimeLeft, _setEraTimeLeft]: any = useState(0);
+  const [eraTimeLeft, _setEraTimeLeft] = useState(0);
 
   const eraTimeLeftRef = useRef(eraTimeLeft);
   const setEraTimeLeft = (_timeleft: number) => {

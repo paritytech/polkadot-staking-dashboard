@@ -122,6 +122,12 @@ export const ASSISTANT_CONFIG: AssistantConfig = [
           'Nominations that are in the active validator set for the current era, but your bonded funds have not been assigned to these nominations.',
         ],
       },
+      {
+        title: 'Minimum Nominator Bond',
+        description: [
+          'Although the minimum nomination intent is 10 DOT, it does not guarantee staking rewards. The nominated amount has to be greater than minimum active nomination, which is a dynamic value that can be much higher than 10 DOT.',
+        ],
+      },
     ],
     external: [],
   },

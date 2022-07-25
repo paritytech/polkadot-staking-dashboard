@@ -16,14 +16,14 @@ export const List = () => {
 
   const [entityItems, setEntityItems] = useState(
     validatorCommunity.filter(
-      (v: any) => v.validators[network.name.toLowerCase()] !== undefined
+      (v) => v.validators[network.name.toLowerCase()] !== undefined
     )
   );
 
   useEffect(() => {
     setEntityItems(
       validatorCommunity.filter(
-        (v: any) => v.validators[network.name.toLowerCase()] !== undefined
+        (v) => v.validators[network.name.toLowerCase()] !== undefined
       )
     );
   }, [network]);

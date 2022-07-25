@@ -75,7 +75,7 @@ export const calculatePayoutsByDay = (
     return payouts;
   }
 
-  const payoutsByDay: any = [];
+  const payoutsByDay = [];
   let curDay = 367;
   let curYear = 3000;
   let curPayout = {

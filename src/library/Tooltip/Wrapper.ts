@@ -4,7 +4,7 @@
 import styled from 'styled-components';
 import { tooltipBackground, textInvert } from 'theme';
 
-export const Wrapper = styled.div<any>`
+export const Wrapper = styled.div`
   background: ${tooltipBackground};
   box-sizing: border-box;
   display: flex;

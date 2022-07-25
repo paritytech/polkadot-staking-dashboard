@@ -40,9 +40,9 @@ export const Roles = () => {
   const batchKey = 'pool_roles';
 
   // role edits
-  const initEditState: any = (() => {
+  const initEditState = (() => {
     const initState: Record<string, RoleEdit> = {};
-    Object.entries(roles || [])?.forEach(([roleName, address]: any) => {
+    Object.entries(roles || [])?.forEach(([roleName, address]) => {
       initState[roleName] = {
         oldAddress: address,
         newAddress: address,

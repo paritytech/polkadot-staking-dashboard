@@ -58,7 +58,7 @@ export const SideMenu = () => {
   }: UIContextInterface = useUi();
   const controllerNotImported = getControllerNotImported(controller);
 
-  const [pageConfig, setPageConfig]: any = useState({
+  const [pageConfig, setPageConfig] = useState({
     categories: Object.assign(PAGE_CATEGORIES),
     pages: Object.assign(PAGES_CONFIG),
   });
@@ -84,7 +84,7 @@ export const SideMenu = () => {
   useEffect(() => {
     // only process account messages and warnings once accounts are connected
     if (accounts.length) {
-      const _pageConfigWithMessages: any = Object.assign(pageConfig.pages);
+      const _pageConfigWithMessages = Object.assign(pageConfig.pages);
       for (let i = 0; i < _pageConfigWithMessages.length; i++) {
         const { uri } = _pageConfigWithMessages[i];
 

@@ -23,6 +23,7 @@ import { GenerateNominations } from '../GenerateNominations';
 import ActiveNominationsStatBox from './Stats/ActiveNominations';
 import InacctiveNominationsStatBox from './Stats/InactiveNominations';
 import MinimumActiveBondStatBox from './Stats/MinimumActiveBond';
+import MinNominatorBondBox from './Stats/MinNominatorBond';
 import { ControllerNotImported } from './ControllerNotImported';
 import { Status } from './Status';
 
@@ -39,6 +40,7 @@ export const Active = ({ title }: any) => {
       <PageTitle title={title} />
       <StatBoxList>
         <MinimumActiveBondStatBox />
+        <MinNominatorBondBox />
         <ActiveNominationsStatBox />
         <InacctiveNominationsStatBox />
       </StatBoxList>

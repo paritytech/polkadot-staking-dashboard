@@ -4,7 +4,7 @@
 import styled from 'styled-components';
 import { backgroundToggle, borderPrimary, textPrimary } from 'theme';
 
-export const StyledDownshift = styled.div<any>`
+export const StyledDownshift = styled.div<{ height?: string | number }>`
   box-sizing: border-box;
   position: relative;
   width: 100%;
@@ -37,7 +37,7 @@ export const StyledDownshift = styled.div<any>`
   }
 `;
 
-export const StyledController = styled.button<any>`
+export const StyledController = styled.button`
   color: ${textPrimary};
   box-sizing: border-box;
   position: absolute;

@@ -29,7 +29,7 @@ export const NominateFromFavourites = () => {
   const controller = getBondedAccount(activeAccount);
   const { membership } = usePoolMemberships();
   const { maxNominations } = consts;
-  const { bondType, nominations }: any = config;
+  const { bondType, nominations } = config;
   const signingAccount = bondType === 'pool' ? activeAccount : controller;
 
   // store filtered favourites

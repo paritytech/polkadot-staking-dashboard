@@ -29,7 +29,7 @@ export const ValidatorListProvider = (props: any) => {
   };
 
   const removeFromSelected = (items: Array<any>) => {
-    setSelected([...selected].filter((item: any) => !items.includes(item)));
+    setSelected([...selected].filter((item) => !items.includes(item)));
   };
 
   const resetSelected = () => {

@@ -44,7 +44,7 @@ export const ModalWrapper = styled(motion.div)`
   }
 `;
 
-export const HeightWrapper = styled.div<any>`
+export const HeightWrapper = styled.div<{ size: string }>`
   border: ${cardBorder} ${borderPrimary};
   box-shadow: ${cardShadow} ${shadowColor};
   transition: height 0.4s cubic-bezier(0.1, 1, 0.2, 1);
@@ -58,7 +58,7 @@ export const HeightWrapper = styled.div<any>`
 `;
 
 // Modal content wrapper
-export const ContentWrapper = styled.div<any>`
+export const ContentWrapper = styled.div`
   box-sizing: border-box;
   background: ${modalBackground};
   width: 100%;
@@ -84,7 +84,7 @@ export const ContentWrapper = styled.div<any>`
 `;
 
 // generic wrapper for modal padding
-export const PaddingWrapper = styled.div<any>`
+export const PaddingWrapper = styled.div<{ verticalOnly?: boolean }>`
   box-sizing: border-box;
   display: flex;
   flex-flow: column wrap;
@@ -95,7 +95,7 @@ export const PaddingWrapper = styled.div<any>`
 `;
 
 // modal header, used for extrinsics forms
-export const HeadingWrapper = styled.h3<any>`
+export const HeadingWrapper = styled.h3<{ noPadding?: boolean }>`
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;

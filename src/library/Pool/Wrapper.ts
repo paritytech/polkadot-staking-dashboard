@@ -10,7 +10,7 @@ import {
   networkColor,
 } from 'theme';
 
-export const Wrapper = styled(motion.div)<any>`
+export const Wrapper = styled(motion.div)`
   display: flex;
   flex-flow: row nowrap;
   width: 100%;

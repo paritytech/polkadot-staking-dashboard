@@ -20,6 +20,7 @@ import { useConnect } from '../../Connect';
 import { usePoolsConfig } from '../PoolsConfig';
 import { useBondedPools } from '../BondedPools';
 import { usePoolMemberships } from '../PoolMemberships';
+// import { Validator } from 'contexts/Validators/types';
 
 export const ActivePoolContext = React.createContext<ActivePoolContextState>(
   defaults.defaultActivePoolContext
@@ -393,7 +394,7 @@ export const ActivePoolProvider = ({
     const statuses: { [key: string]: string } = {};
 
     for (const nomination of nominations) {
-      const s = eraStakers.stakers.find((_n: any) => _n.address === nomination);
+      const s = eraStakers.stakers.find((_n) => _n.address === nomination);
 
       if (s === undefined) {
         statuses[nomination] = 'waiting';

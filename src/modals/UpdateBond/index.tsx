@@ -14,7 +14,7 @@ export const UpdateBond = () => {
   const { config, setModalHeight } = useModal();
   const { fn, bondType } = config;
   // modal task
-  const [task, setTask]: any = useState(null);
+  const [task, setTask] = useState(null);
 
   // active modal section
   const [section, setSection] = useState(0);

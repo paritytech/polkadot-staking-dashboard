@@ -25,12 +25,12 @@ export const Entity = () => {
 
   // include validators that exist in `erasStakers`
   const [shuffledValidators, setShuffledValidators] = useState(
-    shuffle(allValidators.filter((v: any) => validators.includes(v.address)))
+    shuffle(allValidators.filter((v) => validators.includes(v.address)))
   );
 
   useEffect(() => {
     setShuffledValidators(
-      allValidators.filter((v: any) => validators.includes(v.address))
+      allValidators.filter((v) => validators.includes(v.address))
     );
   }, [allValidators, network]);
 

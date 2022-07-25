@@ -33,11 +33,11 @@ export const Status = () => {
   // get nomination status
   const nominationStatuses = getNominationsStatus();
 
-  const active: any = Object.values(nominationStatuses).filter(
-    (_v: any) => _v === 'active'
+  const active = Object.values(nominationStatuses).filter(
+    (_v) => _v === 'active'
   ).length;
 
-  const payeeStatus: any = PAYEE_STATUS.find((item: any) => item.key === payee);
+  const payeeStatus = PAYEE_STATUS.find((item) => item.key === payee);
 
   let startTitle = 'Start Staking';
   if (inSetup()) {

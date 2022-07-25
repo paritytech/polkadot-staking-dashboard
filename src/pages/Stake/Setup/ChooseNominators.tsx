@@ -8,8 +8,9 @@ import { GenerateNominations } from '../GenerateNominations';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { MotionContainer } from './MotionContainer';
+import { ChooseNominatorsProps } from '../types';
 
-export const ChooseNominators = (props: any) => {
+export const ChooseNominators = (props: ChooseNominatorsProps) => {
   const { consts } = useApi();
   const { section } = props;
   const { activeAccount } = useConnect();

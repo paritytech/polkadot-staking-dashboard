@@ -24,7 +24,7 @@ export const BondInputWithFeedback = (props: BondInputWithFeedbackProps) => {
 
   // functional props
   const setters = props.setters ?? [];
-  const listenIsValid: any = props.listenIsValid ?? (() => {});
+  const listenIsValid = props.listenIsValid ?? (() => {});
 
   const { network } = useApi();
   const { activeAccount } = useConnect();

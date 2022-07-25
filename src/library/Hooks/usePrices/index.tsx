@@ -19,7 +19,7 @@ export const usePrices = () => {
       : JSON.parse(pricesLocal);
   };
 
-  const [prices, _setPrices]: any = useState(pricesLocalStorage());
+  const [prices, _setPrices] = useState(pricesLocalStorage());
   const pricesRef = useRef(prices);
 
   const setPrices = (p: any) => {

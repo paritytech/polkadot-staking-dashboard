@@ -52,7 +52,7 @@ export const SessionEraProvider = ({
   // active subscription
   const subscribeToSessionProgress = async () => {
     if (isReady && api !== null) {
-      const _unsub = await api.derive.session.progress((session: AnyApi) => {
+      const _unsub = await api.derive.session.progress((session) => {
         setStateWithRef(
           {
             eraLength: session.eraLength.toNumber(),

@@ -12,7 +12,7 @@ import {
 } from 'theme';
 import { MAX_ASSISTANT_INTERFACE_WIDTH } from 'consts';
 
-export const Wrapper = styled.div<any>`
+export const Wrapper = styled.div<{ format?: string; showStatus?: boolean }>`
   display: flex;
   flex-flow: row wrap;
   width: 100%;

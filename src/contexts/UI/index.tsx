@@ -47,7 +47,7 @@ export const UIProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   // get side menu minimised state from local storage, default to not
-  const _userSideMenuMinimised: any = Number(
+  const _userSideMenuMinimised = Number(
     localStorageOrDefault('side_menu_minimised', 0)
   );
 
@@ -172,7 +172,7 @@ export const UIProvider = ({ children }: { children: React.ReactNode }) => {
    */
   const setupDefault = () => {
     // generate setup objects from connected accounts
-    const _setup = connectAccounts.map((item: any) => {
+    const _setup = connectAccounts.map((item) => {
       // if there is existing config for an account, use that.
       const localSetup = localStorage.getItem(
         `${network.name.toLowerCase()}_stake_setup_${item.address}`
@@ -249,7 +249,7 @@ export const UIProvider = ({ children }: { children: React.ReactNode }) => {
 
     // get current progress
     const _accountSetup = [...setupRef.current].find(
-      (item: any) => item.address === activeAccount
+      (item) => item.address === activeAccount
     );
 
     // abort if setup does not exist
@@ -278,11 +278,11 @@ export const UIProvider = ({ children }: { children: React.ReactNode }) => {
    * Service toggling
    */
   const toggleService = (key: string) => {
-    let _services: any = [...services];
-    const found = _services.find((item: any) => item === key);
+    let _services = [...services];
+    const found = _services.find((item) => item === key);
 
     if (found) {
-      _services = _services.filter((_s: any) => _s !== key);
+      _services = _services.filter((_s) => _s !== key);
     } else {
       _services.push(key);
     }

@@ -11,11 +11,12 @@ import { Button } from 'library/Button';
 import { humanNumber } from 'Utils';
 import { useSubmitExtrinsic } from 'library/Hooks/useSubmitExtrinsic';
 import { Warning } from 'library/Form/Warning';
+import { SummaryProps } from 'pages/Stake/types';
 import { SummaryWrapper } from './Wrapper';
 import { MotionContainer } from '../MotionContainer';
 import { Header } from '../Header';
 
-export const Summary = (props: any) => {
+export const Summary = (props: SummaryProps) => {
   const { section } = props;
 
   const { api, network } = useApi();

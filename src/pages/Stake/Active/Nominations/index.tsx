@@ -41,7 +41,7 @@ export const Nominations = ({ bondType }: { bondType: 'pool' | 'stake' }) => {
   // callback function to stop nominating selected validators
   const cbStopNominatingSelected = (provider: any) => {
     const { selected } = provider;
-    const _nominations = [...nominations].filter((n: any) => {
+    const _nominations = [...nominations].filter((n) => {
       return !selected.map((_s: any) => _s.address).includes(n);
     });
     openModalWith(

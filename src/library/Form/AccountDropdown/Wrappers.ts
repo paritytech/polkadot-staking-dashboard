@@ -64,7 +64,7 @@ export const StyledDownshift = styled.div`
   }
 `;
 
-export const StyledController = styled.button<any>`
+export const StyledController = styled.button`
   color: ${textPrimary};
   box-sizing: border-box;
   border: none;
@@ -81,7 +81,9 @@ export const StyledController = styled.button<any>`
 `;
 
 /* dropdown box for vertical scroll */
-export const StyledDropdown = styled.div<any>`
+export const StyledDropdown = styled.div<{
+  height: string | number | undefined;
+}>`
   background: ${backgroundDropdown};
   position: relative;
   box-sizing: border-box;

@@ -10,7 +10,7 @@ import {
   shadowColor,
 } from 'theme';
 
-export const Wrapper = styled.div<any>`
+export const Wrapper = styled.div`
   background: ${backgroundPrimary};
   box-sizing: border-box;
   border-radius: 1.25rem;

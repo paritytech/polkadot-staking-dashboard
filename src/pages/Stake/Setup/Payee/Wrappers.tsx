@@ -22,7 +22,7 @@ export const Items = styled.div`
   flex: 1;
 `;
 
-export const Item = styled.button<any>`
+export const Item = styled.button<{ selected?: boolean }>`
   background: ${backgroundToggle};
   border: 2px solid
     ${(props) => (props.selected ? networkColor : backgroundToggle)};

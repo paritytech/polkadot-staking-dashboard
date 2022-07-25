@@ -117,7 +117,10 @@ export const BodyInterfaceWrapper = styled.div`
  * on smaller screens.
  * Used once in Router.
  */
-export const SideInterfaceWrapper = styled.div<any>`
+export const SideInterfaceWrapper = styled.div<{
+  minimised: number;
+  open: number;
+}>`
   box-sizing: border-box;
   height: 100vh;
   display: flex;
@@ -179,7 +182,7 @@ export const PageWrapper = styled(motion.div)`
  * and position relative to top of screen when the element
  * is stuck.
  */
-export const PageTitleWrapper = styled.header<any>`
+export const PageTitleWrapper = styled.header<{ sticky: boolean; ref: any }>`
   box-sizing: border-box;
   background: ${backgroundPrimary};
   position: sticky;
@@ -270,7 +273,7 @@ export const MenuPaddingWrapper = styled.div`
  * Used to separate page content based on rows.
  * Commonly used with RowPrimaryWrapper and RowSecondaryWrapper.
  */
-export const PageRowWrapper = styled.div<any>`
+export const PageRowWrapper = styled.div<{ noVerticalSpacer?: boolean }>`
   box-sizing: border-box;
   margin-top: ${(props) => (props.noVerticalSpacer === true ? '0' : '1rem')};
   margin-bottom: ${(props) => (props.noVerticalSpacer === true ? '0' : '1rem')};
@@ -294,7 +297,10 @@ export const PageRowWrapper = styled.div<any>`
  *
  * The primary module in a PageRow.
  */
-export const RowPrimaryWrapper = styled.div<any>`
+export const RowPrimaryWrapper = styled.div<{
+  vOrder: number;
+  hOrder: number;
+}>`
   order: ${(props) => props.vOrder};
   box-sizing: border-box;
   flex: 1;
@@ -320,7 +326,10 @@ export const RowPrimaryWrapper = styled.div<any>`
  *
  * The secondary module in a PageRow.
  */
-export const RowSecondaryWrapper = styled.div<any>`
+export const RowSecondaryWrapper = styled.div<{
+  vOrder: number;
+  hOrder: number;
+}>`
   order: ${(props) => props.vOrder};
   box-sizing: border-box;
   flex-basis: 100%;

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { FLOATING_MENU_WIDTH } from 'consts';
 import { modalBackground, borderPrimary, textSecondary } from 'theme';
 
-export const Wrapper = styled.div<any>`
+export const Wrapper = styled.div`
   background: ${modalBackground};
   box-sizing: border-box;
   width: ${FLOATING_MENU_WIDTH}px;

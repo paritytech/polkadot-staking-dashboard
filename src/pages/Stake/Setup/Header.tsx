@@ -6,8 +6,9 @@ import { Button } from 'library/Button';
 import { useConnect } from 'contexts/Connect';
 import { useUi } from 'contexts/UI';
 import { HeaderWrapper } from '../Wrappers';
+import { HeaderProps } from '../types';
 
-export const Header = (props: any) => {
+export const Header = (props: HeaderProps) => {
   const { activeAccount } = useConnect();
   const { getSetupProgress, setActiveAccountSetupSection } = useUi();
   const setup = getSetupProgress(activeAccount);

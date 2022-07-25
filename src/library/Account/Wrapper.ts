@@ -10,7 +10,11 @@ import {
   borderPrimary,
 } from 'theme';
 
-export const Wrapper = styled(motion.button)<any>`
+export const Wrapper = styled(motion.button)<{
+  fill: string;
+  fontSize: string;
+  cursor: string;
+}>`
   border: 1px solid ${borderPrimary};
   background: ${(props) => props.fill};
   font-size: ${(props) => props.fontSize};

@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const StakingAccount = styled.div<any>`
+export const StakingAccount = styled.div<{ last: boolean }>`
   margin-bottom: ${(props) => (props.last === true ? 'none' : '1rem')};
   display: flex;
   flex-flow: row wrap;

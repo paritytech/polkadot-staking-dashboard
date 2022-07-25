@@ -4,7 +4,7 @@
 import styled from 'styled-components';
 import { backgroundLabel, textSecondary } from 'theme';
 
-export const Wrapper = styled.div<any>`
+export const Wrapper = styled.div<{ topOffset?: string }>`
   position: absolute;
   top: ${(props) => (props.topOffset ? props.topOffset : '50%')};
   left: 0;

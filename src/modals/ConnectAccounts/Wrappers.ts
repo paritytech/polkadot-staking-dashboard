@@ -224,7 +224,7 @@ export const AccountWrapper = styled.div`
   }
 `;
 
-export const ExtensionWrapper = styled.div<any>`
+export const ExtensionWrapper = styled.div<{ noSpacing?: boolean }>`
   box-sizing: border-box;
   width: 100%;
 

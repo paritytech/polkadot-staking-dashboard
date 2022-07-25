@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { backgroundLabel, textSecondary, networkColor } from 'theme';
 
-export const Wrapper = styled.div<any>`
+export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-flow: row wrap;

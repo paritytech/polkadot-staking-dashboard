@@ -137,7 +137,7 @@ export const BondedPoolsProvider = ({
     const subscribeToMetadata = async (id: AnyApi) => {
       const unsub = await api.query.nominationPools.metadata.multi(
         id,
-        (_metadata: AnyApi) => {
+        (_metadata) => {
           const metadata = [];
           for (let i = 0; i < _metadata.length; i++) {
             metadata.push(_metadata[i].toHuman());

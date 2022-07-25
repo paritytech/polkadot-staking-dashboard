@@ -27,14 +27,14 @@ export const StatPie = (props: StatPieProps) => {
   const { network } = useApi();
   const { mode } = useTheme();
 
-  const borderColor: any = isZero
+  const borderColor = isZero
     ? defaultThemes.buttons.toggle.background[mode]
     : [
         networkColors[`${network.name}-${mode}`],
         defaultThemes.transparent[mode],
       ];
 
-  const backgroundColor: any = isZero
+  const backgroundColor = isZero
     ? defaultThemes.buttons.toggle.background[mode]
     : networkColorsTransparent[`${network.name}-${mode}`];
 

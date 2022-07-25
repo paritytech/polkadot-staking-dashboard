@@ -10,11 +10,12 @@ import { BondStatusBar } from 'library/Form/BondStatusBar';
 import { BondOptions } from 'contexts/Balances/types';
 import { planckBnToUnit } from 'Utils';
 import { useApi } from 'contexts/Api';
+import { BondProps } from 'pages/Stake/types';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { MotionContainer } from '../MotionContainer';
 
-export const Bond = (props: any) => {
+export const Bond = (props: BondProps) => {
   const { network } = useApi();
   const { units } = network;
   const { section } = props;

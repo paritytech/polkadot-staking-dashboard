@@ -124,7 +124,7 @@ export const ValidatorFilterProvider = ({
     if (meta[batchKey] === undefined) {
       return list;
     }
-    const filteredList: any = [];
+    const filteredList = [];
     for (const validator of list) {
       const addressBatchIndex =
         meta[batchKey].addresses?.indexOf(validator.address) ?? -1;
@@ -166,7 +166,7 @@ export const ValidatorFilterProvider = ({
     if (meta[batchKey] === undefined) {
       return list;
     }
-    const filteredList: any = [];
+    const filteredList = [];
     for (const validator of list) {
       const addressBatchIndex =
         meta[batchKey].addresses?.indexOf(validator.address) ?? -1;

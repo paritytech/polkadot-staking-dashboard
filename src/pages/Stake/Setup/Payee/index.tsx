@@ -5,13 +5,14 @@ import { useState, useEffect } from 'react';
 import { isNumeric } from 'Utils';
 import { useUi } from 'contexts/UI';
 import { useConnect } from 'contexts/Connect';
+import { PayeeProps } from 'pages/Stake/types';
 import { Spacer } from '../../Wrappers';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { MotionContainer } from '../MotionContainer';
 import { Items, Item } from './Wrappers';
 
-export const Payee = (props: any) => {
+export const Payee = (props: PayeeProps) => {
   const { section } = props;
 
   const { activeAccount } = useConnect();

@@ -5,8 +5,9 @@ import { Button } from 'library/Button';
 import { useConnect } from 'contexts/Connect';
 import { useUi } from 'contexts/UI';
 import { FooterWrapper } from '../Wrappers';
+import { FooterProps } from '../types';
 
-export const Footer = (props: any) => {
+export const Footer = (props: FooterProps) => {
   const { activeAccount } = useConnect();
   const { getSetupProgress, setActiveAccountSetupSection } = useUi();
   const setup = getSetupProgress(activeAccount);

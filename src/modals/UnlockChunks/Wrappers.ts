@@ -40,7 +40,7 @@ export const ContentWrapper = styled.div`
   padding: 0 1rem;
 `;
 
-export const ChunkWrapper = styled.div<any>`
+export const ChunkWrapper = styled.div<{ noFill?: boolean }>`
   flex: 1;
   display: flex;
   flex-flow: column wrap;

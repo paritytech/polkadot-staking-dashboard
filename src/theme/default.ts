@@ -11,7 +11,7 @@ const v = (light: string, dark: string) => ({
 });
 
 // eslint-disable-next-line
-export const defaultThemes: any = {
+export const defaultThemes: { [key: string]:any } = {
   transparent: v('rgba(255,255,255,0', 'rgba(0,0,0,0)'),
   text: {
     primary: v('#333', '#ccc'),
@@ -98,7 +98,7 @@ const c = (flat: string, border: string, shadow: string) => ({
 });
 
 // eslint-disable-next-line
-export const cardThemes: any = {
+export const cardThemes = {
   card: {
     border: c('none', '1px solid', 'none'),
     shadow: c('none', 'none', '-2px 2px 25px'),

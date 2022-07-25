@@ -147,7 +147,7 @@ export const ValidatorsProvider = ({
     const targets = getAccountNominations(activeAccount);
 
     // format to list format
-    const targetsFormatted = targets.map((item: any) => {
+    const targetsFormatted = targets.map((item) => {
       return { address: item };
     });
     // fetch preferences
@@ -540,7 +540,7 @@ export const ValidatorsProvider = ({
    * Adds a favourite validator.
    */
   const addFavourite = (address: string) => {
-    const _favourites: any = Object.assign(favourites);
+    const _favourites = Object.assign(favourites);
     if (!_favourites.includes(address)) {
       _favourites.push(address);
     }

@@ -12,8 +12,9 @@ import { useAccount } from 'contexts/Account';
 import { getIdentityDisplay } from 'library/ValidatorList/Validator/Utils';
 import { NotificationText } from 'contexts/Notifications/types';
 import { AccountWrapper } from './Wrappers';
+import { PoolAccountProps } from './types';
 
-export const PoolAccount = (props: any) => {
+export const PoolAccount = (props: PoolAccountProps) => {
   const { address, last, batchKey, batchIndex } = props;
 
   const { addNotification } = useNotifications();

@@ -10,8 +10,8 @@ export const ActiveNominationsStatBox = () => {
 
   const total = Object.values(nominationStatuses).length;
   const active =
-    Object.values(nominationStatuses).filter((_v: any) => _v === 'active')
-      .length ?? 0;
+    Object.values(nominationStatuses).filter((_v) => _v === 'active').length ??
+    0;
 
   const params = {
     label: 'Active Nominations',

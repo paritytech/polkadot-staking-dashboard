@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { textSecondary, backgroundNetworkBar, networkColor } from 'theme';
 import { SIDE_MENU_STICKY_THRESHOLD } from 'consts';
 
-export const Wrapper = styled(motion.div)<any>`
+export const Wrapper = styled(motion.div)`
   width: 100%;
   display: flex;
   flex-flow: column nowrap;

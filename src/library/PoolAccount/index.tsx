@@ -20,7 +20,7 @@ export const PoolAccount = (props: PoolAccountProps) => {
   const { activeAccount } = useConnect();
   const { fetchPoolsMetaBatch, meta } = useBondedPools();
 
-  const { label }: any = props;
+  const { label } = props;
 
   // is this the initial fetch
   const [fetched, setFetched] = useState(false);

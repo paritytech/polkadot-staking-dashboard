@@ -40,7 +40,7 @@ export class BlockNumber extends React.Component<any, any> {
   }
 
   componentWillUnmount() {
-    const { unsub }: any = this.state;
+    const { unsub } = this.state;
     if (unsub !== null) {
       unsub();
     }

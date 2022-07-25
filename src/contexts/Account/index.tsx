@@ -98,7 +98,7 @@ export const AccountProvider = ({
     );
 
     const subscribeToIdentities = async (addr: string[]) => {
-      const unsub = await api.query.identity.identityOf.multi<AnyApi>(
+      const unsub = await api.query.identity.identityOf.multi(
         addr,
         (_identities) => {
           const identities = [];
@@ -118,7 +118,7 @@ export const AccountProvider = ({
     };
 
     const subscribeToSuperIdentities = async (addr: string[]) => {
-      const unsub = await api.query.identity.superOf.multi<AnyApi>(
+      const unsub = await api.query.identity.superOf.multi(
         addr,
         async (_supers) => {
           // determine where supers exist
@@ -138,7 +138,7 @@ export const AccountProvider = ({
             .filter((s: AnyApi) => s !== null)
             .map((s: AnyApi) => s[0]);
 
-          const temp = await api.query.identity.identityOf.multi<AnyApi>(
+          const temp = await api.query.identity.identityOf.multi(
             query,
             (_identities) => {
               for (let j = 0; j < _identities.length; j++) {
@@ -165,7 +165,7 @@ export const AccountProvider = ({
     await Promise.all([
       subscribeToIdentities(addresses),
       subscribeToSuperIdentities(addresses),
-    ]).then((unsubs: AnyApi) => {
+    ]).then((unsubs) => {
       addMetaBatchUnsubs(key, unsubs);
     });
   };

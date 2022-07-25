@@ -37,7 +37,7 @@ export interface PoolMembership {
   poolId: number;
   points: string;
   rewardPoolTotalEarnings: string;
-  unbondingEras: any;
+  unbondingEras: number;
   unlocking: any;
 }
 

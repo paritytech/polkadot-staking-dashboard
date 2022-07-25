@@ -30,7 +30,7 @@ export const PoolListInner = (props: PoolListProps) => {
   const { listFormat, setListFormat } = usePoolList();
 
   // current page
-  const [page, setPage]: any = useState(1);
+  const [page, setPage] = useState(1);
 
   // current render iteration
   const [renderIteration, _setRenderIteration] = useState<number>(1);
@@ -39,7 +39,7 @@ export const PoolListInner = (props: PoolListProps) => {
   const [poolsDefault, setPoolsDefault] = useState(props.pools);
 
   // manipulated list (ordering, filtering) of pools
-  const [pools, setPools]: any = useState(props.pools);
+  const [pools, setPools] = useState(props.pools);
 
   // is this the initial fetch
   const [fetched, setFetched] = useState(false);

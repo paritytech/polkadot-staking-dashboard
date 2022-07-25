@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 import { useConnect } from 'contexts/Connect';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { EXTENSIONS } from 'config/extensions';
+import { EXTENSIONS, ExtensionConfig } from 'config/extensions';
 import { isMobileDevice } from 'Utils';
 import {
   ContentWrapper,
@@ -15,8 +15,9 @@ import {
 } from './Wrappers';
 import { Extension } from './Extension';
 import { ReadOnly } from './ReadOnly';
+import { forwardRefProps } from './types';
 
-export const Extensions = forwardRef((props: any, ref: any) => {
+export const Extensions = forwardRef((props: forwardRefProps, ref: any) => {
   const { setSection } = props;
 
   const { accounts } = useConnect();
@@ -51,7 +52,7 @@ export const Extensions = forwardRef((props: any, ref: any) => {
         {/* web extensions not available on mobile devices */}
         {!isMobileDevice() && (
           <>
-            {EXTENSIONS.map((extension: any, i: number) => {
+            {EXTENSIONS.map((extension: ExtensionConfig, i: number) => {
               return (
                 <Extension
                   key={`active_extension_${i}`}

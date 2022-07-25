@@ -9,7 +9,7 @@ import { useTheme } from 'contexts/Themes';
 import { defaultThemes, networkColors } from 'theme/default';
 import { useApi } from 'contexts/Api';
 
-const Wrapper = styled.div<any>`
+const Wrapper = styled.div<{ color: string; opacity: number }>`
   position: absolute;
   right: 10px;
   top: 10px;

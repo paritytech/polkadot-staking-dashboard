@@ -43,8 +43,8 @@ export const Status = () => {
   const { openModalWith } = useModal();
   const { active } = getPoolBondOptions(activeAccount);
   const nominationStatuses = getNominationsStatus();
-  const activeNominations: any = Object.values(nominationStatuses).filter(
-    (_v: any) => _v === 'active'
+  const activeNominations = Object.values(nominationStatuses).filter(
+    (_v) => _v === 'active'
   ).length;
   const isNominating = !!poolNominations?.targets?.length;
 

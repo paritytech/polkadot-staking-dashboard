@@ -39,7 +39,7 @@ export const BondSome = (props: any) => {
   const [bond, setBond] = useState({ bond: freeToBond });
 
   // bond valid
-  const [bondValid, setBondValid]: any = useState(false);
+  const [bondValid, setBondValid] = useState(false);
 
   // update bond value on task change
   useEffect(() => {

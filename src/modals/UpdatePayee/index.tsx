@@ -26,7 +26,7 @@ export const UpdatePayee = () => {
   const { staking, getControllerNotImported } = useStaking();
   const { payee } = staking;
 
-  const _selected: any = PAYEE_STATUS.find((item: any) => item.key === payee);
+  const _selected: any = PAYEE_STATUS.find((item) => item.key === payee);
   const [selected, setSelected]: any = useState(null);
 
   // reset selected value on account change
@@ -36,9 +36,7 @@ export const UpdatePayee = () => {
 
   // ensure selected key is valid
   useEffect(() => {
-    const exists: any = PAYEE_STATUS.find(
-      (item: any) => item.key === selected?.key
-    );
+    const exists = PAYEE_STATUS.find((item) => item.key === selected?.key);
     setValid(exists !== undefined);
   }, [selected]);
 
@@ -72,7 +70,7 @@ export const UpdatePayee = () => {
   });
 
   // remove active payee option from selectable items
-  const payeeItems = PAYEE_STATUS.filter((item: any) => {
+  const payeeItems = PAYEE_STATUS.filter((item) => {
     return item.key !== _selected.key;
   });
 

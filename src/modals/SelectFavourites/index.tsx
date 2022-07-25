@@ -15,7 +15,7 @@ export const SelectFavourites = () => {
   const { config, setStatus, setResize } = useModal();
   const { favouritesList } = useValidators();
   const { maxNominations } = consts;
-  const { nominations, callback: generateNominationsCallback }: any = config;
+  const { nominations, callback: generateNominationsCallback } = config;
 
   // store filtered favourites
   const [availableFavourites, setAvailableFavourites] = useState<

@@ -57,7 +57,7 @@ export const Header = styled.div`
   }
 `;
 
-export const Pagination = styled.div<any>`
+export const Pagination = styled.div<{ next: boolean; prev: boolean }>`
   width: 100%;
   display: flex;
   align-items: center;
