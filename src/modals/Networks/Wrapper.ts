@@ -4,6 +4,8 @@
 import styled from 'styled-components';
 import {
   backgroundToggle,
+  buttonDisabledBackground,
+  buttonDisabledText,
   buttonPrimaryBackground,
   textPrimary,
   textSecondary,
@@ -46,6 +48,37 @@ export const ContentWrapper = styled.div`
       margin: 0.75rem 0;
     }
 
+    .wo-light-client {
+      width: 100%;
+    }
+
+    .w-light-client {
+      width: 60%;
+    }
+
+    .light-client {
+      width: 40%;
+    }
+
+    button:disabled,
+    button[disabled] .action-button {
+      background-color: ${buttonDisabledBackground};
+      cursor: default;
+      h3 {
+        color: ${buttonDisabledText};
+      }
+      svg {
+        fill: ${buttonDisabledText};
+      }
+      &:hover {
+        background: ${buttonDisabledBackground};
+      }
+    }
+
+    .disabled {
+      background-color: yellow;
+    }
+
     .action-button {
       background: ${buttonPrimaryBackground};
       box-sizing: border-box;
@@ -53,12 +86,11 @@ export const ContentWrapper = styled.div`
       cursor: pointer;
       margin-bottom: 1rem;
       border-radius: 0.75rem;
-      display: flex;
+      display: inline-flex;
       flex-flow: row wrap;
       justify-content: flex-start;
       align-items: center;
       transition: all 0.15s;
-      width: 100%;
 
       &:last-child {
         margin-bottom: 0;

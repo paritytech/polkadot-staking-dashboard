@@ -1,7 +1,7 @@
 // Copyright 2022 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useApi } from 'contexts/Api';
 import { useUi } from 'contexts/UI';
 import { usePrices } from 'library/Hooks/usePrices';
@@ -11,7 +11,7 @@ import { Status } from './Status';
 
 export const NetworkBar = () => {
   const { services } = useUi();
-  const { network } = useApi();
+  const { network, isLightClient } = useApi();
   const prices = usePrices();
 
   // currently not in use
@@ -34,6 +34,8 @@ export const NetworkBar = () => {
   const DISCLAIMER_URL = process.env.REACT_APP_DISCLAIMER_URL;
   const ORGANISATION = process.env.REACT_APP_ORGANISATION;
 
+  const [networkName, setNetworkName] = useState<string>(network.name);
+
   useOutsideAlerter(
     ref,
     () => {
@@ -41,6 +43,12 @@ export const NetworkBar = () => {
     },
     ['igignore-network-info-toggle']
   );
+
+  useEffect(() => {
+    setNetworkName(
+      isLightClient ? network.name.concat(' light') : network.name
+    );
+  }, [network.name, isLightClient]);
 
   return (
     <Wrapper
@@ -57,7 +65,7 @@ export const NetworkBar = () => {
       <Summary>
         <section>
           <network.brand.icon className="network_icon" />
-          <p>{ORGANISATION === undefined ? network.name : ORGANISATION}</p>
+          <p>{ORGANISATION === undefined ? networkName : ORGANISATION}</p>
           <Separator />
           {PRIVACY_URL !== undefined ? (
             <p>

@@ -116,6 +116,16 @@ export const buttonHoverBackground: theme.ThemeSet = theme(
   defaultThemes.buttons.hover.background
 );
 
+export const buttonDisabledBackground: theme.ThemeSet = theme(
+  v,
+  defaultThemes.buttons.disabled.background
+);
+
+export const buttonDisabledText: theme.ThemeSet = theme(
+  v,
+  defaultThemes.buttons.disabled.text
+);
+
 // labels
 
 export const tagBackground: theme.ThemeSet = theme(

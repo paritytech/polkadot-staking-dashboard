@@ -30,6 +30,12 @@ export const Wrapper = styled(motion.button)<MinimisedProps>`
     font-size: 1rem;
     font-variation-settings: 'wght' 480;
   }
+  .light {
+    color: ${textSecondary};
+    font-size: 0.8rem;
+    margin-left: 0.2rem;
+    font-variation-settings: 'wght' 480;
+  }
   .action {
     color: ${textSecondary};
     flex: 1;

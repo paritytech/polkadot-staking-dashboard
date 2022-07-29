@@ -11,7 +11,7 @@ const v = (light: string, dark: string) => ({
 });
 
 // eslint-disable-next-line
-export const defaultThemes: { [key: string]:any } = {
+export const defaultThemes: { [key: string]: any } = {
   transparent: v('rgba(255,255,255,0', 'rgba(0,0,0,0)'),
   text: {
     primary: v('#333', '#ccc'),
@@ -67,6 +67,10 @@ export const defaultThemes: { [key: string]:any } = {
     toggle: { background: v('rgba(244,243,242,1)', '#1a1a1a') },
     assistant: { background: v('#ececec', '#242424') },
     hover: { background: v('rgba(232, 230, 230, 0.9)', '#080808') },
+    disabled: {
+      background: v('#F3F6F4', '#000000'),
+      text: v('#ececec', '#444444'),
+    },
   },
   border: {
     primary: v('#e6e6e6', '#2a2a2a'),

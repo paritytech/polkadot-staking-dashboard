@@ -9,7 +9,7 @@ import { Wrapper, MinimisedWrapper, IconWrapper } from './Wrappers';
 import { SecondaryProps } from '../types';
 
 export const Secondary = (props: SecondaryProps) => {
-  const { status } = useApi();
+  const { status, isLightClient } = useApi();
   const { openModalWith } = useModal();
 
   const { action, name, icon, minimised } = props;
@@ -46,7 +46,12 @@ export const Secondary = (props: SecondaryProps) => {
         <Svg width={size} height={size} />
       </IconWrapper>
 
-      {!minimised && <div className="name">{name}</div>}
+      {!minimised && (
+        <div className="name">
+          {name}
+          <span className="light">{isLightClient ? 'light' : ''}</span>
+        </div>
+      )}
       {!minimised && (
         <div className={`action${minimised ? ' minimised' : ''}`}>{action}</div>
       )}
