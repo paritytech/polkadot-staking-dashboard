@@ -16,15 +16,11 @@ import type {
 import { SyncController } from 'controllers/SyncController';
 import type { AnyApi, NetworkName } from 'types';
 import { NetworkList, NetworksWithPagedRewards } from 'config/networks';
-import { makeCancelable, rmCommas } from '@w3ux/utils';
+import { rmCommas } from '@w3ux/utils';
 import { WellKnownChain } from '@substrate/connect';
 import type { BlockNumber } from '@polkadot/types/interfaces';
-import type {
-  APIEventDetail,
-  ConnectionType,
-  EventApiStatus,
-  SubstrateConnect,
-} from './types';
+import type { APIEventDetail, ConnectionType, EventApiStatus } from './types';
+import * as Sc from '@substrate/connect';
 
 export class Api {
   // ------------------------------------------------------
@@ -59,9 +55,6 @@ export class Api {
 
   // Unsubscribe objects.
   #unsubs: Record<string, VoidFn> = {};
-
-  // Cancel function of dynamic substrate connect import.
-  cancelFn: () => void;
 
   // Store the active era.
   activeEra: APIActiveEra = defaultActiveEra;
@@ -147,18 +140,15 @@ export class Api {
 
   // Dynamically load and connect to Substrate Connect.
   async initScProvider() {
-    // Dynamically load Substrate Connect.
-    const ScPromise = makeCancelable(import('@substrate/connect'));
-    this.cancelFn = ScPromise.cancel;
-    const Sc = (await ScPromise.promise) as SubstrateConnect;
-
     // Get light client key from network list.
     const lightClientKey = NetworkList[this.network].endpoints
       .lightClient as WellKnownChain;
 
     // Instantiate light client provider.
     this.#provider = new ScProvider(Sc, WellKnownChain[lightClientKey]);
+    console.log('connect to provider');
     await this.#provider.connect();
+    console.log('connected to provider');
   }
 
   // ------------------------------------------------------

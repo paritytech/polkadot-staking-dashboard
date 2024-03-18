@@ -378,11 +378,10 @@ export const APIProvider = ({ children, network }: APIProviderProps) => {
     reInitialiseApi(connectionType);
   }, [network]);
 
-  // Call `cancelFn` and `unsubscribe` on active instnace on unmount.
+  // Call `unsubscribe` on active instnace on unmount.
   useEffect(
     () => () => {
       const instance = ApiController.get(network);
-      instance?.cancelFn?.();
       instance?.unsubscribe();
     },
     []

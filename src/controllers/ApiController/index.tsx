@@ -39,9 +39,7 @@ export class ApiController {
     // NOTE: This method should only be called to connect to a new instance. We therefore assume we
     // want to disconnect from all other existing instances.
     await Promise.all(
-      Object.entries(this.#instances).map(async ([key, instance]) => {
-        // Cancel pending Sc loading before destroying instance.
-        instance?.cancelFn?.();
+      Object.entries(this.#instances).map(async ([key]) => {
         await this.destroy(key as NetworkName);
       })
     );
