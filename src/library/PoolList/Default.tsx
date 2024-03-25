@@ -183,6 +183,7 @@ export const PoolList = ({
       <List $flexBasisLarge={allowMoreCols ? '33.33%' : '50%'}>
         {allowSearch && poolsDefault.length > 0 && (
           <SearchInput
+            value={searchTerm ?? ''}
             handleChange={handleSearchChange}
             placeholder={t('search')}
           />

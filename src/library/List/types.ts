@@ -22,6 +22,7 @@ export interface PaginationProps {
 }
 
 export interface SearchInputProps {
+  value: string;
   handleChange: (e: FormEvent<HTMLInputElement>) => void;
   placeholder: string;
 }

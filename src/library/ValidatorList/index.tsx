@@ -333,6 +333,7 @@ export const ValidatorListInner = ({
       <List $flexBasisLarge={allowMoreCols ? '33.33%' : '50%'}>
         {allowSearch && (
           <SearchInput
+            value={searchTerm ?? ''}
             handleChange={handleSearchChange}
             placeholder={t('searchAddress')}
           />
