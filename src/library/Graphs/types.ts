@@ -51,4 +51,6 @@ export interface GeoDonutProps {
   series: AnyPolkawatch;
   width?: string | number;
   height?: string | number;
+  legendHeight?: number;
+  maxLabelLen?: number;
 }

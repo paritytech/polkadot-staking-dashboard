@@ -18,6 +18,8 @@ export const GeoDonut = ({
   series = { labels: [], data: [] },
   height = 'auto',
   width = 'auto',
+  legendHeight = 25,
+  maxLabelLen = 3,
 }: GeoDonutProps) => {
   const { mode } = useTheme();
   const { colors } = useNetwork().networkData;
@@ -46,7 +48,7 @@ export const GeoDonut = ({
       legend: {
         display: true,
         position: 'bottom' as const,
-        maxHeight: 25,
+        maxHeight: legendHeight,
         labels: {
           boxWidth: 10,
           generateLabels: (chart: AnyJson) => {
@@ -55,7 +57,10 @@ export const GeoDonut = ({
                 chart
               );
             return ls.map((l) => {
-              l.text = ellipsisFn(l.text, undefined, 'end');
+              l.text =
+                maxLabelLen && l.text.length > maxLabelLen
+                  ? ellipsisFn(l.text, maxLabelLen, 'end')
+                  : l.text;
               return l;
             });
           },

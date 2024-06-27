@@ -130,6 +130,7 @@ export const ValidatorGeo = () => {
                 series={pwData.topCountryDistributionChart}
                 height={`${height}px`}
                 width={chartWidth}
+                maxLabelLen={10}
               />
             </GraphWrapper>
 
@@ -144,6 +145,7 @@ export const ValidatorGeo = () => {
                   series={pwData.topNetworkDistributionChart}
                   height={`${height}px`}
                   width={chartWidth}
+                  maxLabelLen={10}
                 />
               </GraphWrapper>
             </div>

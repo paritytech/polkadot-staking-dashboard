@@ -10,6 +10,18 @@
       "validator": "{{count}} 个验证人",
       "website": "个人网站"
     },
+    "decentralization": {
+      "analyticsNotAvailable": "无法使用该分布式分析器",
+      "analyticsNotSupported": "此网络不支持该分布式分析器",
+      "byRegionCountryNetwork": "按地区、国家和网络",
+      "decentralizationPerNomination": "每个提名的地理位置",
+      "howDecentralizedIsYourNomination": "您的提名去中心化程度如何？",
+      "maxErasAnalyzed": "最大分析Era数",
+      "nominationShareInRewards": "奖励份额",
+      "payoutDistribution": "收益分布",
+      "polkawatchDisabled": "Polkawatch己断开",
+      "totalPayoutsAnalysed": "总收益分析"
+    },
     "nominate": {
       "activeNominations": "活跃提名人",
       "addressCopied": "地址已复制到剪贴板",

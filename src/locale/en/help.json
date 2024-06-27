@@ -3,9 +3,7 @@
     "definitions": {
       "activeNominators": [
         "Active Nominators",
-        [
-          "Nominators who are active in the current session."
-        ]
+        ["Nominators who are active in the current session."]
       ],
       "activePools": [
         "Active Pools",
@@ -75,6 +73,15 @@
           "A validator can update their commission rates as and when they please, and such changes will have an impact on your profitability. Be sure to monitor your nominations on this dashboard to keep updated on their commission rates."
         ]
       ],
+      "decentralizationAnalyticsPeriod": [
+        "Decentralization Analytics Period",
+        [
+          "The decentralization of your nomination is calculated analysing the rewards payed out in the last 30 days.",
+          "Depending on the Network this will translate into a number of Eras.",
+          "30 days provides enough information for the aggregation to be meaningful.",
+          "30 days is also short enough for changes in nominations to start impacting this analysis after a few days."
+        ]
+      ],
       "epoch": [
         "Epoch",
         [
@@ -94,6 +101,15 @@
         [
           "Era Points are accumulated by validators during each era, and depend on a validator's performance.",
           "As a staker, you do not need to worry about Era Points. In general, better performing validators produce more Era Points, which in-turn lead to higher staking rewards."
+        ]
+      ],
+      "geolocationOfEachNomination": [
+        "Geolocation of Each Nomination",
+        [
+          "Each nominated validator runs at a given datacenter that can be geolocated by its IP address. ",
+          "The table displays the last Region, Country and Network where each nominated validator was geolocated.",
+          "When the validator has been located at more than one location during the analytic period a ++ sign will be displayed.",
+          "The percentage shown is the proportion of rewards payed out to you by this validator in the analytic period."
         ]
       ],
       "idealStaked": [
@@ -181,6 +197,13 @@
         [
           "Nominating is the process of selecting validators you wish to stake your {NETWORK_UNIT} to. You can choose to nominate up to 16 validators for each of your accounts.",
           "Once you have nominated your selected validators, they become your nominations."
+        ]
+      ],
+      "nominationPayoutDistribution": [
+        "Nomination Payout Distribution",
+        [
+          "The decentralization of your nomination.",
+          "The following charts display the distribution of rewards aggregated by the Region, Country and IP Network of the validator the payed out the reward."
         ]
       ],
       "nominationPools": [
@@ -359,6 +382,13 @@
           "In order to stake {NETWORK_UNIT}, you can either become a nominator or join a pool - that act as nominators themselves."
         ]
       ],
+      "totalPayoutsAnalysed": [
+        "Total Payouts Analysed",
+        [
+          "The aggregated {NETWORK_UNIT} rewards payed out by nominated validators in the last 30 days.",
+          "These payouts were used to calculate the decentralization of your nomination."
+        ]
+      ],
       "validator": [
         "Validator",
         [
@@ -391,6 +421,7 @@
       "connectAccounts": "How to Connect Your Accounts",
       "createPools": "Creating Nomination Pools",
       "howToUse": "How to Use the Staking Dashboard: Overview",
+      "polkawatchAnalytics": "Decentralization Analytics by Polkawatch: Introduction",
       "rebonding": "Rebonding",
       "stakeDot": "Staking your DOT",
       "unbondingTokens": "Unbonding Your Tokens"

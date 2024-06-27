@@ -5,6 +5,7 @@ import { Community } from 'pages/Community';
 import { Nominate } from 'pages/Nominate';
 import { Overview } from 'pages/Overview';
 import { Payouts } from 'pages/Payouts';
+import { NominationGeo } from 'pages/NominationGeo';
 import { Pools } from 'pages/Pools';
 import { Validators } from 'pages/Validators';
 import type { PageCategoryItems, PagesConfigItems } from 'types';
@@ -57,6 +58,14 @@ export const PagesConfig: PagesConfigItems = [
     hash: '/payouts',
     Entry: Payouts,
     lottie: 'analytics',
+  },
+  {
+    category: 2,
+    key: 'decentralization',
+    uri: `${BASE_URL}decentralization`,
+    hash: '/decentralization',
+    Entry: NominationGeo,
+    lottie: 'globe',
   },
   {
     category: 3,

@@ -115,6 +115,22 @@ export const HelpConfig: HelpItems = [
     ],
   },
   {
+    key: 'decentralization',
+    definitions: [
+      'Decentralization Analytics Period',
+      'Geolocation of Each Nomination',
+      'Nomination Payout Distribution',
+      'Total Payouts Analysed',
+    ],
+    external: [
+      [
+        'polkawatchAnalytics',
+        'https://blog.polkawatch.app/introducing-polkawatch/',
+        'polkawatch.app',
+      ],
+    ],
+  },
+  {
     key: 'validators',
     definitions: [
       'Validator',
