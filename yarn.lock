@@ -2869,12 +2869,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@w3ux/validator-assets@npm:0.2.0-alpha.0":
-  version: 0.2.0-alpha.0
-  resolution: "@w3ux/validator-assets@npm:0.2.0-alpha.0"
+"@w3ux/validator-assets@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@w3ux/validator-assets@npm:0.2.0"
   peerDependencies:
     react: ^18
-  checksum: 10c0/17e44ffd54e34c7b9b642bf2aa6a50a1d2f86ce0f8b2df8b6c5587c1a8b4db5ba2f5b49fe7dd4dfa5cc0d7f209cad8703c2bc4b4949ed50aaf34574755b18310
+  checksum: 10c0/58c9a0f6b2093f3376e1963933eee2cb72eced7b3b473f75d7efbc6c2d674bd6b8c25ab92b114dba137c128db72bca54bc8a9ed557ef37ec65751a845e96b0d8
   languageName: node
   linkType: hard
 
@@ -6438,7 +6438,7 @@ __metadata:
     "@w3ux/react-polkicon": "npm:1.2.0"
     "@w3ux/types": "npm:0.2.0"
     "@w3ux/utils": "npm:^0.3.0"
-    "@w3ux/validator-assets": "npm:0.2.0-alpha.0"
+    "@w3ux/validator-assets": "npm:0.2.0"
     "@zondax/ledger-substrate": "npm:^0.44.2"
     bignumber.js: "npm:^9.1.2"
     bn.js: "npm:^5.2.1"
