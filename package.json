@@ -76,7 +76,7 @@
     "@typescript-eslint/parser": "^7.12.0",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "@w3ux/types": "0.2.0",
-    "eslint": "8.57.0",
+    "eslint": "9.6.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
