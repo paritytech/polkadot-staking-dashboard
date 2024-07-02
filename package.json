@@ -36,7 +36,7 @@
     "@w3ux/react-polkicon": "1.2.0",
     "@w3ux/utils": "^0.3.0",
     "@w3ux/validator-assets": "0.2.0-alpha.0",
-    "@zondax/ledger-substrate": "^0.44.2",
+    "@zondax/ledger-substrate": "^0.44.4",
     "bignumber.js": "^9.1.2",
     "bn.js": "^5.2.1",
     "buffer": "^6.0.3",

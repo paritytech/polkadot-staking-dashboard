@@ -905,7 +905,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ledgerhq/hw-transport@npm:^6.31.0":
+"@ledgerhq/hw-transport@npm:6.31.0, @ledgerhq/hw-transport@npm:^6.31.0":
   version: 6.31.0
   resolution: "@ledgerhq/hw-transport@npm:6.31.0"
   dependencies:
@@ -2887,14 +2887,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zondax/ledger-substrate@npm:^0.44.2":
-  version: 0.44.2
-  resolution: "@zondax/ledger-substrate@npm:0.44.2"
+"@zondax/ledger-substrate@npm:^0.44.4":
+  version: 0.44.4
+  resolution: "@zondax/ledger-substrate@npm:0.44.4"
   dependencies:
-    "@ledgerhq/hw-transport": "npm:6.30.6"
+    "@ledgerhq/hw-transport": "npm:6.31.0"
     "@zondax/ledger-js": "npm:^0.8.2"
-    axios: "npm:^1.6.8"
-  checksum: 10c0/635aa85636c883c8e99d9b5f18368d6b0196af47315be5b46b8130c63e9cd1930bb7cb58fb6756cb4c137d485ef19ecce8c7df70bfb0f0003f84b3022ad29993
+    axios: "npm:^1.7.2"
+  checksum: 10c0/973ca89ed512bc9a2d05e1ae5990b0c8193c826864b55883a294941cb6b4681c394a91e08549a6874d0927fcbadf7f627fe54d80e875be5822c7787f7e5ba609
   languageName: node
   linkType: hard
 
@@ -3191,7 +3191,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.6.8":
+"axios@npm:^1.7.2":
   version: 1.7.2
   resolution: "axios@npm:1.7.2"
   dependencies:
@@ -6439,7 +6439,7 @@ __metadata:
     "@w3ux/types": "npm:0.2.0"
     "@w3ux/utils": "npm:^0.3.0"
     "@w3ux/validator-assets": "npm:0.2.0-alpha.0"
-    "@zondax/ledger-substrate": "npm:^0.44.2"
+    "@zondax/ledger-substrate": "npm:^0.44.4"
     bignumber.js: "npm:^9.1.2"
     bn.js: "npm:^5.2.1"
     buffer: "npm:^6.0.3"
