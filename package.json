@@ -87,7 +87,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-unused-imports": "3.2.0",
     "prettier": "^3.3.1",
-    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-organize-imports": "^4.0.0",
     "sass": "^1.77.4",
     "typescript": "^5.4.3",
     "vite": "^5.2.12",
