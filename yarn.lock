@@ -2847,17 +2847,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@w3ux/utils@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "@w3ux/utils@npm:0.3.0"
-  dependencies:
-    "@polkadot/keyring": "npm:^12.6.2"
-    "@polkadot/util": "npm:^12.6.2"
-    bignumber.js: "npm:^9.1.1"
-  checksum: 10c0/8e5b231d4d39c0c5fa88d81f2fdcdf7a8f5a4fd5e8047124c8953fe539bc120593d80801432837247911a0fcc6eb877867c545283d1bdb2b1a7103ebf24257cf
-  languageName: node
-  linkType: hard
-
 "@w3ux/utils@npm:^0.4.0":
   version: 0.4.0
   resolution: "@w3ux/utils@npm:0.4.0"
@@ -6437,7 +6426,7 @@ __metadata:
     "@w3ux/react-odometer": "npm:1.1.0"
     "@w3ux/react-polkicon": "npm:1.2.0"
     "@w3ux/types": "npm:0.2.0"
-    "@w3ux/utils": "npm:^0.3.0"
+    "@w3ux/utils": "npm:^0.4.0"
     "@w3ux/validator-assets": "npm:0.2.0-alpha.0"
     "@zondax/ledger-substrate": "npm:^0.44.2"
     bignumber.js: "npm:^9.1.2"
